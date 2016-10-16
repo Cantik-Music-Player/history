@@ -14,18 +14,7 @@ describe "History Component", ->
     }
 
   it "Render", ->
-    new HistoryView(@history, {
-        pluginManager: {
-          plugins: {
-            sidebar: {
-              sidebarView: {
-                getElement: ->
-                  document.getElementsByTagName("body")[0]
-              }
-            }
-          }
-      }
-    })
+    new HistoryView(@history)
 
     # Clean data-react-id
     html = document.getElementsByTagName("body")[0].innerHTML.replace(/ data-reactroot=""/g, '')

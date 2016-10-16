@@ -24,7 +24,7 @@ class HistoryView
       <HistoryComponent history=@history />,
       @element
     )
-    cantik.pluginManager.plugins.sidebar.sidebarView.getElement().appendChild(@element);
+    document.getElementsByTagName('body')[0].appendChild(@element)
 
   # Returns an object that can be retrieved when package is activated
   serialize: ->
